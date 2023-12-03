@@ -22,4 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', views.emp_data_view),
     path('', views.emp_data_json_view),
+    path('json/cbv1', views.JsonCBV.as_view()),
+    path('json/cbv2', views.JsonCBV2.as_view()),
+
 ]

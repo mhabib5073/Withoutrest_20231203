@@ -16,8 +16,11 @@ from django.views.generic import View
 class JsonCBV(View):
     def get(self,request,*args,**kwargs):
        emp_data = {'eno':101,'ename':'Rohit','esal':1000,'eaddr':'Hyderabad'}
-       
        return JsonResponse(emp_data)
     
-
+from testApp.mixin import JsonResponseMinxin
+class JsonCBV2(JsonResponseMinxin,View):
+    def get(self,request,*args,**kwargs):
+        emp_data={'eno':100,'ename':'Sunny Leone','esal':1000,'eaddr':'Hyderabad'}
+        return self.render_to_json_response(emp_data)
 
