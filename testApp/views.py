@@ -15,7 +15,7 @@ def emp_data_json_view(request):
 from django.views.generic import View
 class JsonCBV(View):
     def get(self,request,*args,**kwargs):
-       emp_data = {'eno':101,'ename':'Rohit','esal':1000,'eaddr':'Hyderabad'}
+       emp_data = {'eno':102,'ename':'Rohit','esal':1000,'eaddr':'Hyderabad'}
        return JsonResponse(emp_data)
     
 from testApp.mixin import JsonResponseMinxin
